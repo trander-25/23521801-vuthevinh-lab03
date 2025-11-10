@@ -8,9 +8,7 @@ function Counter() {
       <p style={{ 
         fontSize: '3rem', 
         fontWeight: 'bold', 
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
+        color: '#333',
         margin: '20px 0'
       }}>
         {count}
@@ -19,38 +17,36 @@ function Counter() {
         <button 
           onClick={() => setCount(count + 1)}
           style={{
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            background: '#4a5568',
             color: 'white',
             border: 'none',
-            padding: '14px 28px',
-            borderRadius: '8px',
+            padding: '12px 24px',
+            borderRadius: '4px',
             fontSize: '1rem',
             cursor: 'pointer',
-            fontWeight: '600',
-            boxShadow: '0 4px 12px rgba(102,126,234,0.3)',
-            transition: 'all 0.3s ease'
+            fontWeight: '500',
+            transition: 'all 0.2s ease'
           }}
-          onMouseOver={(e) => e.target.style.transform = 'translateY(-2px)'}
-          onMouseOut={(e) => e.target.style.transform = 'translateY(0)'}
+          onMouseOver={(e) => e.target.style.background = '#2d3748'}
+          onMouseOut={(e) => e.target.style.background = '#4a5568'}
         >
           ➕ Increment
         </button>
         <button 
           onClick={() => setCount(0)}
           style={{
-            background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+            background: '#dc2626',
             color: 'white',
             border: 'none',
-            padding: '14px 28px',
-            borderRadius: '8px',
+            padding: '12px 24px',
+            borderRadius: '4px',
             fontSize: '1rem',
             cursor: 'pointer',
-            fontWeight: '600',
-            boxShadow: '0 4px 12px rgba(245,87,108,0.3)',
-            transition: 'all 0.3s ease'
+            fontWeight: '500',
+            transition: 'all 0.2s ease'
           }}
-          onMouseOver={(e) => e.target.style.transform = 'translateY(-2px)'}
-          onMouseOut={(e) => e.target.style.transform = 'translateY(0)'}
+          onMouseOver={(e) => e.target.style.background = '#b91c1c'}
+          onMouseOut={(e) => e.target.style.background = '#dc2626'}
         >
           🔄 Reset
         </button>

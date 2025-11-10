@@ -4,10 +4,11 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #f5f5f5;
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  color: #333;
 }
 
 #root {
@@ -25,10 +26,10 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #4a5568;
   color: white;
   padding: 20px 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   z-index: 1100;
   text-align: center;
 }
@@ -37,12 +38,13 @@ body {
   margin: 0;
   font-size: 2rem;
   font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  color: white;
 }
 
 .app-header p {
   margin: 5px 0 0 0;
   font-size: 0.9rem;
+  color: white;
   opacity: 0.95;
 }
 
@@ -51,14 +53,14 @@ body {
   margin: 20px auto;
   max-width: 900px;
   background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   padding: 28px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Add top padding to prevent overlap with fixed header and tabs */
   padding-top: 120px;
+  border: 1px solid #e0e0e0;
 }
 
 @keyframes fadeIn {
@@ -85,39 +87,34 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   padding: 12px 0 12px 0;
-  background: #f8f9fa;
-  border-radius: 0 0 12px 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   z-index: 1050;
 }
 
 .tab-btn {
   background: #fff;
-  border: 2px solid transparent;
-  padding: 12px 18px;
-  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  padding: 10px 16px;
+  border-radius: 4px;
   cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  font-weight: 500;
+  transition: all 0.2s ease;
   outline: none;
   font-size: 0.9rem;
-  color: #495057;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  color: #333;
 }
 
 .tab-btn:hover {
-  background: #e9ecef;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
-  border-color: #667eea;
+  background: #f5f5f5;
+  border-color: #4a5568;
 }
 
 .tab-btn.active {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #4a5568;
   color: #fff;
-  box-shadow: 0 4px 12px rgba(102,126,234,0.4);
-  transform: translateY(-2px);
-  border-color: transparent;
+  border-color: #4a5568;
 }
 .tabs-content {
   padding: 16px 0 0 0;
@@ -128,9 +125,9 @@ body {
   min-height: 500px;
 }
 .card {
-  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   padding: 24px;
   margin-bottom: 20px;
   width: 100%;
@@ -138,26 +135,25 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid rgba(102,126,234,0.1);
-  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+  transition: all 0.2s ease;
 }
 
 .card:hover {
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-  transform: translateY(-4px);
-  border-color: rgba(102,126,234,0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  border-color: #d0d0d0;
 }
 
 .card h3 {
   margin-top: 0;
   margin-bottom: 12px;
-  color: #667eea;
+  color: #333;
   font-size: 1.3rem;
   font-weight: 700;
   text-align: center;
   width: 100%;
   padding-bottom: 8px;
-  border-bottom: 2px solid #e9ecef;
+  border-bottom: 2px solid #e0e0e0;
 }
 .profile-avatar {
   border-radius: 50%;
@@ -173,7 +169,7 @@ body {
 
 .todo-app h2 {
   margin-bottom: 20px;
-  color: #667eea;
+  color: #333;
   font-size: 1.5rem;
   text-align: center;
 }
@@ -183,53 +179,51 @@ body {
   gap: 12px;
   margin-bottom: 24px;
   padding: 16px;
-  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  background: #f5f5f5;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
 }
 
 .todo-app input[type="text"] {
   flex: 1;
-  padding: 14px 16px;
-  border-radius: 8px;
-  border: 2px solid #e9ecef;
+  padding: 12px 14px;
+  border-radius: 4px;
+  border: 1px solid #d0d0d0;
   font-size: 1rem;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   background: white;
   outline: none;
+  color: #333;
 }
 
 .todo-app input[type="text"]:focus {
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
+  border-color: #4a5568;
+  box-shadow: 0 0 0 2px rgba(74,85,104,0.1);
 }
 
 .todo-app input[type="text"]::placeholder {
-  color: #adb5bd;
-  font-style: italic;
+  color: #999;
 }
 
 .todo-app form button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #4a5568;
   color: #fff;
   border: none;
-  border-radius: 8px;
-  padding: 14px 24px;
+  border-radius: 4px;
+  padding: 12px 20px;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(102,126,234,0.3);
+  transition: all 0.2s ease;
   white-space: nowrap;
 }
 
 .todo-app form button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(102,126,234,0.4);
+  background: #2d3748;
 }
 
 .todo-app form button:active {
-  transform: translateY(0);
+  background: #1a202c;
 }
 
 .todo-app ul {
@@ -242,13 +236,12 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 16px;
-  margin-bottom: 12px;
+  padding: 14px;
+  margin-bottom: 10px;
   background: white;
-  border-radius: 10px;
-  border: 2px solid #e9ecef;
-  transition: all 0.3s ease;
-  animation: slideIn 0.3s ease;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.2s ease;
 }
 
 @keyframes slideIn {
@@ -263,47 +256,44 @@ body {
 }
 
 .todo-app li:hover {
-  border-color: #667eea;
-  box-shadow: 0 4px 12px rgba(102,126,234,0.15);
-  transform: translateX(4px);
+  border-color: #4a5568;
+  background: #f9f9f9;
 }
 
 .todo-app input[type="checkbox"] {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
-  accent-color: #667eea;
+  accent-color: #4a5568;
   flex-shrink: 0;
 }
 
 .todo-app li span {
   flex: 1;
   font-size: 1rem;
-  color: #495057;
-  transition: all 0.3s ease;
+  color: #333;
+  transition: all 0.2s ease;
 }
 
 .todo-app li button {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: #dc2626;
   color: white;
   border: none;
-  border-radius: 6px;
-  padding: 8px 16px;
+  border-radius: 4px;
+  padding: 6px 14px;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.85rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(245,87,108,0.3);
+  transition: all 0.2s ease;
   margin-left: auto;
 }
 
 .todo-app li button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(245,87,108,0.4);
+  background: #b91c1c;
 }
 
 .todo-app li button:active {
-  transform: scale(0.98);
+  background: #991b1b;
 }
 
 /* Empty state */
@@ -312,46 +302,43 @@ body {
   display: block;
   text-align: center;
   padding: 32px;
-  color: #adb5bd;
-  font-style: italic;
-  font-size: 1.1rem;
+  color: #999;
+  font-size: 1rem;
 }
 .panel {
-  background: linear-gradient(145deg, #f8f9fa 0%, #ffffff 100%);
-  border-radius: 10px;
-  margin-bottom: 16px;
+  background: #ffffff;
+  border-radius: 6px;
+  margin-bottom: 12px;
   padding: 16px;
   width: 100%;
   max-width: 450px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+  transition: all 0.2s ease;
 }
 
 .panel h4 {
   margin: 0 0 12px 0;
-  color: #495057;
+  color: #333;
   font-size: 1.1rem;
   font-weight: 600;
 }
 
 .panel button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #4a5568;
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
+  padding: 8px 16px;
+  border-radius: 4px;
   cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(102,126,234,0.3);
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 .panel button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(102,126,234,0.4);
+  background: #2d3748;
 }
 h1 {
   text-align: center;
@@ -362,7 +349,7 @@ h1 {
 
 h2 {
   text-align: center;
-  color: #667eea;
+  color: #333;
   font-size: 1.6rem;
   margin-bottom: 20px;
   font-weight: 700;
@@ -378,31 +365,26 @@ h2 {
 }
 
 .theme-light {
-  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+  background: #ffffff;
   color: #333;
+  border: 1px solid #e0e0e0;
 }
 
 .theme-dark {
-  background: linear-gradient(145deg, #2c3e50 0%, #34495e 100%);
-  color: #ecf0f1;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  background: #2d3748;
+  color: #f7fafc;
+  border: 1px solid #4a5568;
 }
 
 .theme-dark h2 {
-  color: #ecf0f1;
+  color: #f7fafc;
 }
 
 .profile-avatar {
   border-radius: 50%;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   margin-bottom: 16px;
-  border: 4px solid #fff;
-  transition: all 0.3s ease;
-}
-
-.profile-avatar:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  border: 3px solid #e0e0e0;
 }
 
 /* Login form styles */
@@ -413,44 +395,44 @@ form {
 form input[type="text"],
 form input[type="password"] {
   width: 100%;
-  padding: 14px 16px;
+  padding: 12px 14px;
   margin: 10px 0;
-  border: 2px solid #e9ecef;
-  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
   box-sizing: border-box;
   font-size: 1rem;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   outline: none;
+  background: white;
+  color: #333;
 }
 
 form input[type="text"]:focus,
 form input[type="password"]:focus {
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
+  border-color: #4a5568;
+  box-shadow: 0 0 0 2px rgba(74,85,104,0.1);
 }
 
 form button[type="submit"] {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #4a5568;
   color: white;
-  padding: 14px 24px;
+  padding: 12px 20px;
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
   cursor: pointer;
   margin-top: 12px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1rem;
   width: 100%;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(102,126,234,0.3);
+  transition: all 0.2s ease;
 }
 
 form button[type="submit"]:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(102,126,234,0.4);
+  background: #2d3748;
 }
 
 form button[type="submit"]:active {
-  transform: translateY(0);
+  background: #1a202c;
 }
 
 /* Responsive styles */
