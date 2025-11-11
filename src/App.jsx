@@ -55,9 +55,6 @@ function App() {
       content: (
         <>
           <h2>Exercise 4: Data Flow with Props</h2>
-          <p>✓ UserProfile receives userData prop with destructuring</p>
-          <p>✓ PropTypes validation implemented</p>
-          <p>✓ Default theme prop set to 'light'</p>
           <Card title="User with Light Theme">
             <UserProfile userData={user1} />
           </Card>
@@ -90,9 +87,6 @@ function App() {
           <Card title="Login Form">
             <Login />
           </Card>
-          <p>✓ Controlled inputs for username and password</p>
-          <p>✓ Single state object with handleChange function</p>
-          <p>✓ Form onSubmit logs data to console</p>
         </>
       )
     },
@@ -104,9 +98,6 @@ function App() {
           <Card title="Accordion - Lifting State Up">
             <Accordion />
           </Card>
-          <p>✓ Card component wraps content with children prop</p>
-          <p>✓ Accordion controls which Panel is active</p>
-          <p>✓ Only one panel can be open at a time</p>
         </>
       )
     },
@@ -140,16 +131,7 @@ function App() {
           <Card title="To-Do List Application">
             <TodoApp />
           </Card>
-          <Card title="Features Implemented">
-            <ul style={{ textAlign: 'left' }}>
-              <li>✓ Add new todos with controlled form input</li>
-              <li>✓ Toggle completion status with checkbox</li>
-              <li>✓ Delete todos with button</li>
-              <li>✓ Line-through styling for completed tasks</li>
-              <li>✓ State lifted up to TodoApp component</li>
-              <li>✓ Props passed down through component hierarchy</li>
-            </ul>
-          </Card>
+
         </>
       )
     }
@@ -158,7 +140,6 @@ function App() {
     <>
       <div className="app-header">
         <h1>Lab 3: Introduction to React</h1>
-        <p>MSc. Tran Vinh Khiem - All Exercises Completed ✨</p>
       </div>
       <Tabs tabs={tabs} />
     </>
